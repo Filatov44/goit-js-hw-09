@@ -4,6 +4,8 @@ const refs = {
   bodyEl: document.querySelector('body'),
 };
 
+let timerId;
+
 refs.startBtn.addEventListener('click', startChangeColor);
 refs.closeBtn.addEventListener('click', stopChangeColor);
 
