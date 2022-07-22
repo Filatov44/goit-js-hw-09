@@ -29,7 +29,10 @@ const options = {
     const getSelectDates = selectedDates[0].getTime();
     const getDataNow = dataNow.getTime();
     if (getSelectDates < getDataNow) {
-      Notify.failure('Please choose a date in the future');
+        Notify.failure('Please choose a date in the future');
+        refs.buttonStartEl.setAttribute('disabled', true);
+        refs.buttonStartEl.classList.remove('timer-button__start');
+
     } else {
       refs.buttonStartEl.removeAttribute('disabled');
 
